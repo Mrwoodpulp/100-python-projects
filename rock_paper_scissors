@@ -1,0 +1,58 @@
+import random
+hello = int(input("What do you choose? Type 0 for Paper, 1 for Rock, 2 for Scissors\n"))
+
+Rock = '''
+   _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+Paper = '''
+    _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+'''
+Scissors = '''
+  _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+name = [f"{Rock}", f"{Paper}", f"{Scissors}"]
+game = random.choice(name)
+if hello == 1:
+    print(f"Computer Chose:\n {game}")
+    print(f"You Chose:\n {Rock}")
+    if game == f"{Paper}":
+        print("You lost")
+    elif game == f"{Rock}":
+        print("Draw")
+    else:
+        print("You Win!")
+elif hello == 0:
+    print(f"Computer Chose:\n {game}")
+    print(f"You Chose:\n {Paper}")
+    if game == f"{Scissors}":
+        print("You Lost!")
+    elif game == f"{Paper}":
+        print("Draw")
+    else:
+        print("You Win!")
+elif hello == 2:
+    print(f"Computer Chose:\n {game}")
+    print(f"You Chose:\n {Scissors}")
+    if game == f"{Scissors}":
+        print("Draw")
+    elif game == f"{Paper}":
+        print("You Win!")
+    else:
+        print("You Lost!")
+else:
+    print("Wrong Input")
